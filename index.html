@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de Códigos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Generador de Códigos Aleatorios</h1>
+
+<div class="input-container">
+  <label for="prefijo">Prefijo:</label>
+  <input type="text" id="prefijo" placeholder="Ej: RC">
+</div>
+
+<div class="input-container">
+  <label for="cantidad">Cantidad de códigos:</label>
+  <input type="number" id="cantidad" placeholder="Ej: 10">
+</div>
+
+<button onclick="generarCodigos()">Generar Códigos</button>
+<button onclick="copiarCodigos()">Copiar Códigos</button>
+<button onclick="descargarCSV()">Descargar CSV</button>
+
+<div id="codigoContainer"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
