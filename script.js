@@ -65,3 +65,21 @@ function descargarCSV() {
   
   link.click();
 }
+
+//mostrar instrucciones
+function mostrarInstrucciones() {
+    document.getElementById("instruccionesModal").style.display = "block";
+  }
+  
+  function cerrarModal() {
+    document.getElementById("instruccionesModal").style.display = "none";
+  }
+  
+  // Cerrar el modal al hacer clic fuera de él
+  window.onclick = function(event) {
+    const modal = document.getElementById("instruccionesModal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+  

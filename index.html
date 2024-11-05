@@ -6,6 +6,22 @@
   <title>Generador de Códigos</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
+<div id="instruccionesModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal()">&times;</span>
+      <h2>Instrucciones</h2>
+      <p>El Generador de Códigos crea códigos irrepetibles que contienen un prefijo que puede ser alfabético, numérico, o alfanumérico, seguido de un número de 5 cifras.</p>
+      <p>Obs: Tenga en cuenta que con un prefijo de 2 letras seguido de un número de 5 dígitos puede generar 67.600.000 códigos irreptibles!</p>
+      <br>
+      <h3>Pasos:</h3>
+      <p>1. Ingrese un prefijo de máx 4 caracteres.</p>
+      <p>2. Especifica la cantidad de códigos que deseas generar.</p>
+      <p>3. Haga clic en "Generar Códigos" para crear los códigos.</p>
+      <p>4. Podrá copiar los códigos al portapapeles o descargarlos como archivo CSV.</p>
+    </div>
+  </div>
+
 <body>
 
 <h1>Generador de Códigos Aleatorios</h1>
@@ -29,6 +45,9 @@
     </button>
     <button id="descargar-btn" onclick="descargarCSV()">
       <img src="icon/csv256x256.png" alt="Descargar CSV">
+    </button>
+    <button id="instrucciones-btn" onclick="mostrarInstrucciones()">
+        <img src="icon/pregunta256x256.png" alt="Instrucciones">
     </button>
   </div>
 
