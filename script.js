@@ -4,6 +4,12 @@ function generarCodigos() {
   const prefijo = document.getElementById("prefijo").value.toUpperCase();
   const cantidad = parseInt(document.getElementById("cantidad").value);
 
+  // Validar longitud del prefijo
+  if (prefijo.length > 5) {
+    alert("El prefijo no puede tener más de 5 caracteres.");
+    return;
+  }
+
   if (!prefijo || isNaN(cantidad) || cantidad <= 0) {
     alert("Por favor, ingresa un prefijo y una cantidad válida.");
     return;
@@ -55,7 +61,7 @@ function descargarCSV() {
 
   // Usar el valor de `cantidad` para nombrar el archivo
   const cantidad = document.getElementById("cantidad").value;
-  link.download = `codigos_generados_${cantidad}.csv`;
+  link.download = `${cantidad}_codigos_generados.csv`;
   
   link.click();
 }
