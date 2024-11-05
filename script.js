@@ -52,6 +52,10 @@ function descargarCSV() {
   // Crear enlace de descarga
   const link = document.createElement("a");
   link.href = URL.createObjectURL(blob);
-  link.download = "codigos_generados.csv";
+
+  // Usar el valor de `cantidad` para nombrar el archivo
+  const cantidad = document.getElementById("cantidad").value;
+  link.download = `codigos_generados_${cantidad}.csv`;
+  
   link.click();
 }
