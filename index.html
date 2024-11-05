@@ -20,9 +20,17 @@
   <input type="number" id="cantidad" placeholder="Ej: 10">
 </div>
 
+<!-- Botón de generar códigos (sin ícono) -->
 <button onclick="generarCodigos()">Generar Códigos</button>
-<button onclick="copiarCodigos()">Copiar Códigos</button>
-<button onclick="descargarCSV()">Descargar CSV</button>
+
+<div class="button-container">
+    <button onclick="copiarCodigos()">
+      <img src="icon/copy256x256.png" alt="Copiar Códigos">
+    </button>
+    <button onclick="descargarCSV()">
+      <img src="icon/csv256x256.png" alt="Descargar CSV">
+    </button>
+  </div>
 
 <div id="codigoContainer"></div>
 

@@ -16,11 +16,24 @@ body {
     margin: 10px 0;
   }
   
-  button {
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    margin: 5px;
-    border-radius: 5px;
+  .button-container {
+    display: flex; /* Establece el contenedor como flex */
+    gap: 10px; /* Espacio entre los botones */
   }
   
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+  }
+  
+  button img {
+    width: 64px;  /* Cambia esto al tamaño deseado */
+    height: 64px; /* Cambia esto al tamaño deseado */
+  }
+
+  button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
