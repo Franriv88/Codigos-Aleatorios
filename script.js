@@ -1,7 +1,7 @@
 let codigosGenerados = [];
 
 function generarCodigos() {
-  const prefijo = document.getElementById("prefijo").value;
+  const prefijo = document.getElementById("prefijo").value.toUpperCase();
   const cantidad = parseInt(document.getElementById("cantidad").value);
 
   if (!prefijo || isNaN(cantidad) || cantidad <= 0) {
