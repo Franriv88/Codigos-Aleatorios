@@ -6,52 +6,51 @@
   <title>Generador de Códigos</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-
-<div id="instruccionesModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="cerrarModal()">&times;</span>
-      <h2>Instrucciones</h2>
-      <p>El Generador de Códigos crea códigos irrepetibles que contienen un prefijo que puede ser alfabético, numérico, o alfanumérico, seguido de un número de 5 cifras.</p>
-      <p>Obs: Tenga en cuenta que con un prefijo de 2 letras seguido de un número de 5 dígitos puede generar 67.600.000 códigos irreptibles!</p>
-      <br>
-      <h3>Pasos:</h3>
-      <p>1. Ingrese un prefijo de máx 4 caracteres.</p>
-      <p>2. Especifica la cantidad de códigos que deseas generar.</p>
-      <p>3. Haga clic en "Generar Códigos" para crear los códigos.</p>
-      <p>4. Podrá copiar los códigos al portapapeles o descargarlos como archivo CSV.</p>
-    </div>
-  </div>
-
 <body>
 
-<h1>Generador de Códigos Aleatorios</h1>
+<div class="container">
+  <h1>Generador de Códigos Aleatorios</h1>
 
-<div class="input-container">
-  <label for="prefijo">Prefijo:</label>
-  <input type="text" id="prefijo" placeholder="Ej: TUTI">
-</div>
-
-<div class="input-container">
-  <label for="cantidad">Cantidad de códigos:</label>
-  <input type="number" id="cantidad" placeholder="Ej: 10">
-</div>
-
-<!-- Botón de generar códigos (sin ícono) -->
-<button id="generar-btn" onclick="generarCodigos()">GENERAR CÓDIGOS</button>
-
-<div class="button-container">
-    <button id="copiar-btn" onclick="copiarCodigos()">
-      <img src="icon/copy256x256.png" alt="Copiar Códigos">
-    </button>
-    <button id="descargar-btn" onclick="descargarCSV()">
-      <img src="icon/csv256x256.png" alt="Descargar CSV">
-    </button>
-    <button id="instrucciones-btn" onclick="mostrarInstrucciones()">
-        <img src="icon/pregunta256x256.png" alt="Instrucciones">
-    </button>
+  <div class="input-container">
+    <label for="prefijo">Prefijo:</label>
+    <input type="text" id="prefijo" placeholder="Ej: TUTI" maxlength="5">
   </div>
 
-<div id="codigoContainer"></div>
+  <div class="input-container">
+    <label for="cantidad">Cantidad de códigos:</label>
+    <input type="number" id="cantidad" placeholder="Ej: 10">
+  </div>
+
+  <button id="generar-btn" onclick="generarCodigos()">Generar Códigos</button>
+
+  <div class="button-container">
+      <button onclick="copiarCodigos()">
+        <img src="icon/copy256x256.png" alt="Copiar Códigos">
+      </button>
+      <button onclick="descargarCSV()">
+        <img src="icon/csv256x256.png" alt="Descargar CSV">
+      </button>
+      <button onclick="mostrarInstrucciones()">
+        <img src="icon/pregunta256x256.png" alt="Instrucciones">
+      </button>
+    </div>
+
+  <div id="codigoContainer"></div>
+
+  <!-- Modal de Instrucciones -->
+  <div id="modalInstrucciones" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarInstrucciones()">&times;</span>
+      <h2>Instrucciones</h2>
+      <ol>
+        <li>Ingresa un prefijo de hasta 5 caracteres en el campo "Prefijo".</li>
+        <li>Especifica la cantidad de códigos a generar en "Cantidad de códigos".</li>
+        <li>Haz clic en "Generar Códigos" para ver los códigos generados.</li>
+        <li>Usa los botones para copiar los códigos o descargar el archivo CSV que los contenga.</li>
+      </ol>
+    </div>
+  </div>
+</div>
 
 <script src="script.js"></script>
 
